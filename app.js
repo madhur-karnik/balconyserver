@@ -14,6 +14,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(errorHandler());
 app.use(cors());
 
+require("./routers/thirdparty")(app);
+
 app.get('/',function(req, res) {
     res.send("Hello World");
 });
